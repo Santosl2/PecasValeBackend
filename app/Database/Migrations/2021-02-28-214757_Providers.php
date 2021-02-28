@@ -20,9 +20,9 @@ class Providers extends Migration
 				'constraint'=>24,
 				'unique'=>true
 			]
-		]);
-
-		$this->forge->addKey('id', true)->createTable('providers');
+		])
+		->addKey('id', true)
+		->createTable('providers');
 	}
 
 	public function down()

@@ -27,9 +27,9 @@ class AddPeca extends Migration
                 'type' => 'datetime',
             ],
             'created_at datetime default current_timestamp'
-        ]);
-
-        $this->forge->addKey('id', true)->createTable('pecas');
+        ])
+        ->addKey('id', true)
+        ->createTable('pecas');
     }
 
     public function down()

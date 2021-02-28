@@ -54,6 +54,8 @@ class BaseController extends Controller
 		array $responseBody,
 		int $code = ResponseInterface::HTTP_OK
 	) {
+
+		
 		return $this
 			->response
 			->setStatusCode($code)

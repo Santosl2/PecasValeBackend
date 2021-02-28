@@ -31,9 +31,9 @@ class Adduser extends Migration
 				'type' => 'VARCHAR',
 				'constraint' => 92
 			]
-		]);
-		
-		$this->forge->addKey('id', true)->createTable('users');
+		])
+		->addKey('id', true)
+		->createTable('users');
 
 	}
 

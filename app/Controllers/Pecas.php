@@ -19,7 +19,9 @@ class Pecas extends BaseController
 
     public function index()
     {
+        
+
         $pp = (new PecasModel())->getAll();
-        var_dump($pp);
+        echo $pp;
     }
 }
