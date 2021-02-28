@@ -22,7 +22,11 @@ class AddPeca extends Migration
             'image' => [
                 'type' => 'TEXT',
                 'null' => true
-            ]
+            ],
+            'updated_at' => [
+                'type' => 'datetime',
+            ],
+            'created_at datetime default current_timestamp'
         ]);
 
         $this->forge->addKey('id', true)->createTable('pecas');

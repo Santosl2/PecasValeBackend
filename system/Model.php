@@ -47,6 +47,8 @@ class Model extends BaseModel
 {
 	// region Properties
 
+
+		
 	/**
 	 * Name of database table
 	 *
