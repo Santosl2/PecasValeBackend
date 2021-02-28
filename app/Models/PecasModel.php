@@ -22,7 +22,7 @@ class PecasModel extends Model
 		foreach($firstQuery as $key => $value)
 		{
 			$id = $value['id'];
-			$pricesQuery = $this->adapter->query("SELECT p.price as value, pv.name FROM pecas_price p RIGHT OUTER JOIN providers pv ON (pv.id = p.providerId) WHERE p.pecaId = $id")->getResultArray();
+			$pricesQuery = $this->adapter->query("SELECT DISTINCT p.price as value, pv.name FROM pecas_price p RIGHT OUTER JOIN providers pv ON (pv.id = p.providerId) WHERE p.pecaId = $id")->getResultArray();
 
 			$firstQuery[$key]['prices'] = $pricesQuery;
 		}
