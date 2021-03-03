@@ -40,8 +40,10 @@ class UserModel extends Model
 		return password_hash($password, PASSWORD_BCRYPT);
 	}
 
-	public function getUserByEmail(string $email): array
+	public function getUserByEmail(string $email, string $password = null): array
 	{
+		
+
 		$user = $this
 			->asArray()
 			->where(['email' => $email])

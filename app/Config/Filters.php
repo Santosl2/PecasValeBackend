@@ -6,6 +6,7 @@ use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
+use App\Filters\JWTAuthenticationFilter;
 
 class Filters extends BaseConfig
 {
@@ -60,5 +61,9 @@ class Filters extends BaseConfig
 	 *
 	 * @var array
 	 */
-	public $filters = [];
+	public $filters = [
+		'auth' => [
+			'before' => ['user/*','user']
+		]
+	];
 }

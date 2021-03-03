@@ -11,15 +11,22 @@ use ReflectionException;
 
 class Pecas extends BaseController
 {
+
     /**
-     * Register a new user
+     * Teste
+     */
+
+     public function teste(){
+         echo 'passou';
+     }
+    /**
+     * List all peças
      * @return Response
      * @throws ReflectionException
      */
 
     public function index()
     {
-        
 
         $pp = (new PecasModel())->getAll();
         echo $pp;

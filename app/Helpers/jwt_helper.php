@@ -7,7 +7,7 @@ use Firebase\JWT\JWT;
 function getJWTFromRequest($authenticationHeader): string
 {
     if (is_null($authenticationHeader)) { //JWT is absent
-        throw new Exception('Missing or invalid JWT in request');
+        throw new Exception('Oops, erro! JWT Inválido');
     }
     //JWT is sent from client in the format Bearer XXXXXXXXX
     return explode(' ', $authenticationHeader)[1];
